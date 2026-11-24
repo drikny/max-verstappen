@@ -84,7 +84,7 @@ header:hover .logo {
 /* === НИЗ === */
 footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 28px;
@@ -742,7 +742,7 @@ article img {
 /* === КНОПКА «НАВЕРХ ↑» === */
 #scroll-top-btn {
     position: fixed;
-    left: 24px;
+    right: 24px;
     bottom: 24px;
     width: 48px;
     height: 48px;
