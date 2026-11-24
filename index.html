@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Verstappen | MV3</title>
+    <link rel="icon" type="image/png" href="Photo/max-verstappen-seeklogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Edu+QLD+Hand:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Shafarik&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <h1>
+                <a href="#wrap">
+                    <img class="logo" src="Photo/max-verstappen-seeklogo.png" alt="Max Verstappen Logo">
+                </a>
+            </h1>
+            <ul id="gnb">
+                <li><a href="https://www.verstappen.com/" target="_blank">Official Site</a></li>
+                <li><a href="https://www.redbullracing.com/int-en" target="_blank">Team Page</a></li>
+                <li><a href="https://www.redbullracing.com/int-en/cars" target="_blank">RedBull Cars</a></li>
+                <li><button id="theme-btn" type="button">🟠 Orange Army</button></li>
+                <li>
+                    <label for="navToggle" class="hamburger">🏆</label>
+                    <input type="checkbox" id="navToggle">
+                    <nav class="side-nav">
+                        <ul>
+                            <li><a href="https://www.verstappen.com/" target="_blank">Official Site</a></li>
+                            <li><a href="https://www.redbullracing.com/int-en" target="_blank">Team Page</a></li>
+                            <li><a href="https://www.redbullracing.com/int-en/cars" target="_blank">RedBull Cars</a></li>
+                            <li><a href="https://www.formula1.com/en/drivers/max-verstappen" target="_blank">Formula 1 Statistics</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/List_of_career_achievements_by_Max_Verstappen" target="_blank">Achievements</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=csYmh0YDcII&t=5s" target="_blank">Video Biography</a></li>
+                        </ul>
+                        <label for="navToggle" class="nav-close-btn">✕</label>
+                    </nav>
+                </li>
+            </ul>
+        </header>
+
+        <div id="container">
+            <div class="video-box">
+                <video autoplay loop muted playsinline>
+                    <source src="Photo/HB.mp4" type="video/mp4">
+                </video>
+                <div class="hero-text">
+                    <span>ORACLE RED BULL RACING</span>
+                    <h1>MAX VERSTAPPEN</h1>
+                    <p>4x Formula 1 World Champion</p>
+                </div>
+            </div>
+
+            <h2 class="section-title">WHO IS MAX VERSTAPPEN?</h2>
+            <div id="about">
+                <p>
+                    <strong>Max Emilian Verstappen</strong> is a Dutch and Belgian Formula One racing driver for
+                    <strong>Oracle Red Bull Racing</strong>.
+                    He is a <strong>four-time Formula One World Drivers' Champion</strong> (2021–2024). He holds the
+                    records for both the youngest driver to start a Grand Prix (at age 17 in 2015) and the youngest
+                    Grand Prix winner (at 18 years and 228 days in 2016). He is also the record-holder for the most wins
+                    in a single Formula One season, having won 19 out of 22 races during his dominant 2023 campaign.
+                </p>
+            </div>
+
+            <h2 class="section-title">GALLERY</h2>
+            <div class="portfolio-box">
+                <ul>
+                    <li>
+                        <a href="#modal1">
+                            <div class="img-wrap">
+                                <img src="Photo/maxverstappen.jpeg" alt="Max Verstappen">
+                            </div>
+                            <strong>Max</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#modal2">
+                            <div class="img-wrap">
+                                <img src="Photo/verstappenhelmet.jpeg" alt="Max Verstappen">
+                            </div>
+                            <strong>Helmet</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#modal3">
+                            <div class="img-wrap">
+                                <img src="Photo/Безназвания.jpeg" alt="Max Verstappen">
+                            </div>
+                            <strong>Rising Trophy</strong>
+                        </a>
+                    </li>
+                </ul>
+
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <a href="#close" class="close-btn">✕</a>
+                        <img src="Photo/maxverstappen.jpeg" alt="Max Verstappen">
+                    </div>
+                </div>
+                <div id="modal2" class="modal">
+                    <div class="modal-content">
+                        <a href="#close" class="close-btn">✕</a>
+                        <img src="Photo/verstappenhelmet.jpeg" alt="Helmet">
+                    </div>
+                </div>
+                <div id="modal3" class="modal">
+                    <div class="modal-content">
+                        <a href="#close" class="close-btn">✕</a>
+                        <img src="Photo/Безназвания.jpeg" alt="Rising Trophy">
+                    </div>
+                </div>
+                <div id="modal-edit" class="modal">
+                    <div class="modal-content">
+                        <a href="#close" class="close-btn">✕</a>
+                        <video controls loop playsinline>
+                            <source src="Photo/Loser.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">THE MACHINES</h2>
+            <div class="wrapper">
+                <input checked type="radio" name="slider" id="slide1" />
+                <input type="radio" name="slider" id="slide2" />
+                <input type="radio" name="slider" id="slide3" />
+
+                <div class="slider-wrapper">
+                    <div class="inner">
+                        <article>
+                            <div class="info top-left">
+                                <h3>RB22</h3>
+                            </div>
+                            <img src="Photo/f1.jpeg" alt="RB22" />
+                        </article>
+
+                        <article>
+                            <div class="info bottom-right">
+                                <h3>RB22</h3>
+                            </div>
+                            <img src="Photo/f11.jpeg" alt="RB22" />
+                        </article>
+
+                        <article>
+                            <div class="info bottom-left">
+                                <h3>RB14</h3>
+                            </div>
+                            <img src="Photo/f111.jpeg" alt="RB14" />
+                        </article>
+                    </div>
+                </div>
+
+                <div class="slider-prev-next-control">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                </div>
+
+                <div class="slider-dot-control">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                </div>
+            </div>
+
+            <h2 class="section-title">CHAMPION &amp; CAREER STATS</h2>
+            <div class="bottom-section">
+                <div id="card">
+                    <img src="Photo/Max Verstappen Formula 1 Racing Poster.jpeg" alt="profile img">
+                    <h1>Dutch Lion🦁</h1>
+                    <p>"You can sleep when you're dead" - Max Verstappen</p>
+                    <a href="#modal-edit">Watch Edit</a>
+                </div>
+
+                <div id="stats-box">
+                    <div class="stat-item">
+                        <span>F1 Seasons</span>
+                        <strong id="mv-seasons">...</strong>
+                    </div>
+                    <div class="stat-item">
+                        <span>Grand Prix Starts</span>
+                        <strong id="mv-starts">...</strong>
+                    </div>
+                    <div class="stat-item">
+                        <span>Career Wins</span>
+                        <strong id="mv-wins">...</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div id="next-race-box">
+                <div class="race-info">
+                    <span class="race-label">NEXT GRAND PRIX</span>
+                    <h3 id="race-name">Loading next race...</h3>
+                    <p id="race-circuit"></p>
+                </div>
+                <div class="countdown">
+                    <div class="cd-item"><strong id="cd-days">00</strong><span>DAYS</span></div>
+                    <div class="cd-item"><strong id="cd-hours">00</strong><span>HRS</span></div>
+                    <div class="cd-item"><strong id="cd-mins">00</strong><span>MIN</span></div>
+                    <div class="cd-item"><strong id="cd-secs">00</strong><span>SEC</span></div>
+                </div>
+            </div>
+
+            <footer>
+                <p>&copy;MV3</p>
+                <ul class="sns-box">
+                    <li><a href="https://www.instagram.com/maxverstappen1/" target="_blank">Instagram</a></li>
+                    <li><a href="http://x.com/Max33Verstappen" target="_blank">X (Twitter)</a></li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+
+    <button id="scroll-top-btn" type="button" title="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
