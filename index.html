@@ -34,10 +34,14 @@
                         <ul>
                             <li><a href="https://www.verstappen.com/" target="_blank">Official Site</a></li>
                             <li><a href="https://www.redbullracing.com/int-en" target="_blank">Team Page</a></li>
-                            <li><a href="https://www.redbullracing.com/int-en/cars" target="_blank">RedBull Cars</a></li>
-                            <li><a href="https://www.formula1.com/en/drivers/max-verstappen" target="_blank">Formula 1 Statistics</a></li>
-                            <li><a href="https://en.wikipedia.org/wiki/List_of_career_achievements_by_Max_Verstappen" target="_blank">Achievements</a></li>
-                            <li><a href="https://www.youtube.com/watch?v=csYmh0YDcII&t=5s" target="_blank">Video Biography</a></li>
+                            <li><a href="https://www.redbullracing.com/int-en/cars" target="_blank">RedBull Cars</a>
+                            </li>
+                            <li><a href="https://www.formula1.com/en/drivers/max-verstappen" target="_blank">Formula 1
+                                    Statistics</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/List_of_career_achievements_by_Max_Verstappen"
+                                    target="_blank">Achievements</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=csYmh0YDcII&t=5s" target="_blank">Video
+                                    Biography</a></li>
                         </ul>
                         <label for="navToggle" class="nav-close-btn">✕</label>
                     </nav>
@@ -62,9 +66,11 @@
                 <p>
                     <strong>Max Emilian Verstappen</strong> is a Dutch Formula One racing driver for
                     <strong>Oracle Red Bull Racing</strong>.
-                    He is a <strong>four-time Formula One World Drivers' Champion</strong> (2021–2024). Renowned for his aggressive, uncompromising racecraft and raw pace, he shattered the sport's
-                     age barriers by becoming both the youngest driver to start a Grand Prix (17) and the youngest to win one (18). In 2023, he delivered the most dominant campaign in Formula One history,
-                     winning a record-breaking 19 out of 22 races.
+                    He is a <strong>four-time Formula One World Drivers' Champion</strong> (2021–2024). Renowned for his
+                    aggressive, uncompromising racecraft and raw pace, he shattered the sport's
+                    age barriers by becoming both the youngest driver to start a Grand Prix (17) and the youngest to win
+                    one (18). In 2023, he delivered the most dominant campaign in Formula One history,
+                    winning a record-breaking 19 out of 22 races.
                 </p>
             </div>
 
@@ -126,46 +132,107 @@
             </div>
 
             <h2 class="section-title">THE MACHINES</h2>
-            <div class="wrapper">
-                <input checked type="radio" name="slider" id="slide1" />
-                <input type="radio" name="slider" id="slide2" />
-                <input type="radio" name="slider" id="slide3" />
+            <div class="eras-section">
+                <!-- Кнопки переключения эпох -->
+                <div class="era-tabs">
+                    <button class="era-btn active" data-era="era1" type="button">2015-2016 · Narrow Aero</button>
+                    <button class="era-btn" data-era="era2" type="button">2017-2021 · High Downforce</button>
+                    <button class="era-btn" data-era="era3" type="button">2022-2025 · Ground Effect</button>
+                    <button class="era-btn" data-era="era4" type="button">2026 · Active Aero</button>
+                </div>
 
-                <div class="slider-wrapper">
-                    <div class="inner">
-                        <article>
-                            <div class="info top-left">
-                                <h3>RB22</h3>
-                            </div>
-                            <img src="Photo/f1.jpeg" alt="RB22" />
-                        </article>
-
-                        <article>
-                            <div class="info bottom-right">
-                                <h3>RB22</h3>
-                            </div>
-                            <img src="Photo/f11.jpeg" alt="RB22" />
-                        </article>
-
-                        <article>
-                            <div class="info bottom-left">
-                                <h3>RB14</h3>
-                            </div>
-                            <img src="Photo/f111.jpeg" alt="RB14" />
-                        </article>
+                <!-- Эпоха 1-->
+                <div id="era1" class="era-grid active">
+                    <div class="car-card">
+                        <img src="Photo/str10.jpg" alt="Toro Rosso STR10">
+                        <span class="car-year">2015 · Toro Rosso</span>
+                        <h3>STR10</h3>
+                        <p>Engine: Renault</p>
+                    </div>
+                    <div class="car-card">
+                        <img src="Photo/str11.jpg" alt="Toro Rosso STR11">
+                        <span class="car-year">2016 · Toro Rosso</span>
+                        <h3>STR11</h3>
+                        <p>Engine: Ferrari</p>
+                    </div>
+                    <div class="car-card">
+                        <img src="Photo/rb12.jpg" alt="Red Bull RB12">
+                        <span class="car-year">2016 · Red Bull Racing</span>
+                        <h3>RB12</h3>
+                        <p>Engine: TAG Heuer(Renault)</p>
                     </div>
                 </div>
 
-                <div class="slider-prev-next-control">
-                    <label for="slide1"></label>
-                    <label for="slide2"></label>
-                    <label for="slide3"></label>
+                <!-- Эпоха 2 -->
+                <div id="era2" class="era-grid">
+                    <div class="car-card">
+                        <img src="Photo/rb13.jpg" alt="Red Bull RB13">
+                        <span class="car-year">2017 · Red Bull Racing</span>
+                        <h3>RB13</h3>
+                        <p>Engine: TAG Heuer(Renault)</p>
+                    </div>
+                    <div class="car-card">
+                        <img src="Photo/rb14.jpg" alt="Red Bull RB14">
+                        <span class="car-year">2018 · Red Bull Racing</span>
+                        <h3>RB14</h3>
+                        <p>Engine: TAG Heuer(Renault)</p>
+                    </div>
+                    <div class="car-card">
+                        <img src="Photo/rb15.jpg" alt="Red Bull RB15">
+                        <span class="car-year">2019 · Red Bull Racing</span>
+                        <h3>RB15</h3>
+                        <p>Engine: Honda</p>
+                    </div>
+                    <div class="car-card">
+                        <img src="Photo/rb16.jpg" alt="Red Bull RB16">
+                        <span class="car-year">2020 · Red Bull Racing</span>
+                        <h3>RB16</h3>
+                        <p>Engine: Honda</p>
+                    </div>
+                    <div class="car-card">
+                        <img src="Photo/rb16.jpg" alt="Red Bull RB16B">
+                        <span class="car-year">2021 · Red Bull Racing</span>
+                        <h3>RB16B</h3>
+                        <p>Engine: Honda</p>
+                    </div>
                 </div>
 
-                <div class="slider-dot-control">
-                    <label for="slide1"></label>
-                    <label for="slide2"></label>
-                    <label for="slide3"></label>
+                <!-- Эпоха 3 -->
+                <div id="era3" class="era-grid">
+                    <div class="car-card">
+                        <img src="Photo/rb18.jpg" alt="Red Bull RB18">
+                        <span class="car-year">2022 · Red Bull Racing</span>
+                        <h3>RB18</h3>
+                        <p>Engine: Honda RBPT</p>
+                    </div>
+                    <div class="car-card">
+                        <img src="Photo/rb19.jpg" alt="Red Bull RB19">
+                        <span class="car-year">2023 · Red Bull Racing</span>
+                        <h3>RB19</h3>
+                        <p>Engine: Honda RBPT</p>
+                    </div>
+                    <div class="car-card">
+                        <img src="Photo/rb20.jpg" alt="Red Bull RB20">
+                        <span class="car-year">2024 · Red Bull Racing</span>
+                        <h3>RB20</h3>
+                        <p>Engine: Honda RBPT</p>
+                    </div>
+                    <div class="car-card">
+                        <img src="Photo/rb21.jpg" alt="Red Bull RB21">
+                        <span class="car-year">2025 · Red Bull Racing</span>
+                        <h3>RB21</h3>
+                        <p>Engine: Honda RBPT</p>
+                    </div>
+                </div>
+
+                <!-- Эпоха 4 -->
+                <div id="era4" class="era-grid">
+                    <div class="car-card">
+                        <img src="Photo/rb22.jpg" alt="Red Bull RB22">
+                        <span class="car-year">2026 · Red Bull Racing</span>
+                        <h3>RB22</h3>
+                        <p>Engine: Red Bull Ford</p>
+                    </div>
                 </div>
             </div>
 
@@ -176,6 +243,23 @@
                     <h1>Dutch Lion🦁</h1>
                     <p>"You can sleep when you're dead" - Max Verstappen</p>
                     <a href="#modal-edit">Watch Edit</a>
+                </div>
+
+                <div id="modal-car" class="modal">
+                    <div class="modal-content">
+                        <a href="#close" class="close-btn">✕</a>
+                        <div id="modal-car-era" class="modal-car-era"></div>
+                        <div class="modal-img-wrap">
+                            <button id="modal-prev" class="modal-nav" type="button">❮</button>
+                            <img id="modal-car-img" src="" alt="Car preview">
+                            <button id="modal-next" class="modal-nav" type="button">❯</button>
+                        </div>
+                        <div class="modal-car-info">
+                            <span id="modal-car-year"></span>
+                            <h3 id="modal-car-title"></h3>
+                            <p id="modal-car-desc"></p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="stats-box">

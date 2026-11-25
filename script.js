@@ -1,11 +1,3 @@
-// === 1. АВТО-СЛАЙДЕР ===
-let current = 1;
-
-setInterval(() => {
-    current = current < 3 ? current + 1 : 1;
-    document.getElementById('slide' + current).checked = true;
-}, 4000);
-
 // === 2. ЗАКРЫТИЕ ПО ESC ===
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
@@ -143,4 +135,75 @@ window.addEventListener('scroll', () => {
 
 scrollTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// === ПЕРЕКЛЮЧЕНИЕ ВКЛАДОК ЭПОХ РЕГЛАМЕНТА ===
+const eraButtons = document.querySelectorAll('.era-btn');
+const eraGrids = document.querySelectorAll('.era-grid');
+
+eraButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        //1. Снимаем active со всех кнопок и сеток
+        eraButtons.forEach((b) => b.classList.remove('active'));
+        eraGrids.forEach((g) => g.classList.remove('active'));
+
+        //2. Активируем нажатую кнопку и нужный блок по data-era
+        btn.classList.add('active');
+        const targetId = btn.dataset.era;
+        document.getElementById(targetId).classList.add('active');
+    });
+});
+
+// === МОДАЛЬНОЕ ОКНО МАШИН СО СТРЕЛКАМИ И ЭПОХОЙ ===
+const allCarCards = Array.from(document.querySelectorAll('.car-card'));
+const carModalImg = document.getElementById('modal-car-img');
+const carModalEra = document.getElementById('modal-car-era');
+const carModalYear = document.getElementById('modal-car-year');
+const carModalTitle = document.getElementById('modal-car-title');
+const carModalDesc = document.getElementById('modal-car-desc');
+const modalPrev = document.getElementById('modal-prev');
+const modalNext = document.getElementById('modal-next');
+let currentCarIndex = 0;
+
+function showCar(index, animate = true) {
+    currentCarIndex = (index + allCarCards.length) % allCarCards.length;
+    const card = allCarCards[currentCarIndex];
+
+    const gridId = card.closest('.era-grid').id;
+    const eraBtn = document.querySelector(`.era-btn[data-era="${gridId}"]`);
+
+    const applyContent = () => {
+        carModalImg.src = card.querySelector('img').src;
+        carModalImg.alt = card.querySelector('img').alt;
+        carModalEra.textContent = eraBtn ? eraBtn.textContent : '';
+        carModalYear.textContent = card.querySelector('.car-year').textContent;
+        carModalTitle.textContent = card.querySelector('h3').textContent;
+        carModalDesc.textContent = card.querySelector('p').textContent;
+        carModalImg.style.opacity = '1';
+    };
+
+    if (animate) {
+        carModalImg.style.opacity = '0';
+        setTimeout(applyContent, 150);
+    } else {
+        applyContent();
+    }
+}
+
+allCarCards.forEach((card, index) => {
+    card.addEventListener('click', () => {
+        showCar(index, false);
+        window.location.hash = 'modal-car';
+    });
+});
+
+if (modalPrev) modalPrev.addEventListener('click', () => showCar(currentCarIndex - 1));
+if (modalNext) modalNext.addEventListener('click', () => showCar(currentCarIndex + 1));
+
+// Листание стрелками ← и → на клавиатуре, пока открыто окно
+document.addEventListener('keydown', (event) => {
+    if (window.location.hash === '#modal-car') {
+        if (event.key === 'ArrowLeft') showCar(currentCarIndex - 1);
+        if (event.key === 'ArrowRight') showCar(currentCarIndex + 1);
+    }
 });
